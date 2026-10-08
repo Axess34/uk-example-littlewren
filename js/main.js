@@ -1,0 +1,3 @@
+document.getElementById('burger').onclick=function(){document.getElementById('links').classList.toggle('open')};
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});document.querySelectorAll('.rv').forEach(function(el){io.observe(el)})}else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}
+var lb=document.getElementById('lb');document.querySelectorAll('[data-lb]').forEach(function(a){a.onclick=function(ev){ev.preventDefault();lb.querySelector('img').src=a.href;lb.querySelector('p').textContent=a.dataset.lb;lb.classList.add('on')}});lb.onclick=function(){lb.classList.remove('on')};
